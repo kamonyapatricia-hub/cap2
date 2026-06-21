@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation bar</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ <div class="topnav"> 
+     <a class="active" href="cap.html">Home</a>
+     <a href="About as.html">About us</a>
+     <a href="#">gallery</a>
+     <a href="#">contact_us</a>
+ </div>
+ 
+ <h1>Nova Pioneer Tatu Primary and International</h1>
+
+ <p>My school is located in kiambu county and sub county ruiru my city is tatu city</p>
+ <p>I have two principles.One is executive  principle and a principle. My executive principle is called cristine kathurima and the principle is called harun</p>
+ <section>
+    <img  class="mySlides" src="heritage day 2026.jpeg" alt="slide1">
+    <img class="mySlides"  src="nova pioneer tatu primary and international.jpeg" alt="slide2">
+    <img class="mySlides"  src="principal christine katurima.jpeg" alt="slide3">
+ </section>
+
+ <script>
+    let myIndex = 0;
+
+    window.onload = function () {
+      carousel();
+    };
+
+    function carousel() {
+      let slides = document.getElementsByClassName("mySlides");
+
+      // hide all slides
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      myIndex++;
+
+      if (myIndex > slides.length) {
+        myIndex = 1;
+      }
+
+      slides[myIndex - 1].style.display = "block";
+
+      setTimeout(carousel, 3000); // change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>
